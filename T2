@@ -1,4 +1,5 @@
-gap> # T is the centralizer of v2 in 1+Gamma(K4).
+# T is the centralizer of v2 in 1+Gamma(K4).
+
 gap> T:=[];
 [  ]
 gap> for a01 in S do
@@ -28,6 +29,7 @@ gap>Size(T);
 
 # C is the set of conjugacy classes of all elements of set T, when v is varying over 144 elements of V(FA4). This step is done to get some intuition of the class length of elements of T. Also,
 position set contains positions of the elements whose class length is 12 and position1 set contains positions of the elements of class length 1.
+
 gap> position:=[];
 [  ]
 gap> position1:=[];
@@ -41,6 +43,7 @@ gap> for j in [1..Size(T)] do
 > od;
 
 # V denotes V(FC3). 
+
 gap> V:=[i, i+(Z(2^2))*i*b^-1+(Z(2^2))*i*b, i+(Z(2^2)^2)*i*b^-1+(Z(2^2)^2)*i*b,  b+(Z(2^2))*i*b^-1+(Z(2^2))*i,  b^2+(Z(2^2))*i*b+(Z(2^2))*i, b+(Z(2^2)^2)*i*b^2+(Z(2^2)^2)*i, b^2+(Z(2^2)^2)*i*b+(Z(2^2)^2)*i, b, b^2 ];
 [ (Z(2)^0)*<identity ...>, (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*b, (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b, 
   (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2)^0)*b, (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b, (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b,
@@ -87,19 +90,25 @@ gap> position1;
   1008, 1024 ]
 
 # The set conjugacyclasses contains 80 different conjugacy classes corresponding to the elements projected by position set. 
+
 gap> conjugacyclasses:=[];
 [  ]
 gap> for j in position do
 > 	Append(conjugacyclasses,[C[j]]);
 > od;
+
 # transversal set contains class representatives of 80 different conjugacy classes.
+
 gap> transversal:=[];
 [  ]
 gap>  for k in [1..Size(conjugacyclasses)] do
 > 	Append(transversal,[conjugacyclasses[k][1]]);
 > od;
+
 # In this step, we are confirming our intuition by calculating the cardinality of centralizer of elements of transversal set, as we operated only 144 elements of V(FA4) to calculate length of conjugacy classes of elements of T.
 We will utilize the fact given by us in the previous code that there is no class length possible between 12 and 144. Therefore, we can conclude that class length is 12 when cardinality of the centralizer is more than 16384 elements.
+
+
 gap> for j in [1..Size(transversal)] do
 >  for t in [transversal[j]] do 
 >    centralizer:=[];
@@ -143,6 +152,11 @@ gap> for j in [1..Size(transversal)] do
 >      od;
 >   od;
 > od;
+
+# As we can see that output contains all the 80 elements, it implies that elements of transversal set have class length exactly equal to 12. So, our intuition was right.
+
+
+
 Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
 2)*b^-1*a*b is less than 144.
 Class Length of (Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
