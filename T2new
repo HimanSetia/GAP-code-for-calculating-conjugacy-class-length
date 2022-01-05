@@ -1,0 +1,213 @@
+gap> # creating the set T
+gap> T:=[];
+[  ]
+gap> for a01 in S do
+>      	for a02 in S do
+>         for a03 in S do
+>           for a11 in S do
+>             for a12 in S do
+>              for a13 in S do
+>               for a21 in S do
+>                 for a22 in S do
+>                   for a23 in S do
+>                     x:=i+a01*(a-i)+a02*i*b*(a-i)+a03*i*b^2*(a-i)+a11*(b*a*b^2-i)+a12*i*b*(b*a*b^2-i)+a13*i*b^2*(b*a*b^2-i)+a21*(b^2*a*b-i)+a22*i*b*(b^2*a*b-i)+a23*i*b^2*(b^2*a*b-i);
+>                     if x*(i*b+Z(2^2)*(i+i*b^2))=(i*b+Z(2^2)*(i+i*b^2))*x then
+>  			Append(T,[x]);
+>  		      fi;
+>                   od;
+>                 od;
+>               od;
+>             od;
+>            od;
+>          od;
+>        od;
+>      od;
+>    od;
+gap>Size(T);
+1024
+
+# creation of distinct conjugacy classes
+gap> position:=[];
+[  ]
+gap> position1:=[];
+[  ]
+gap> C:=[];
+[  ]
+gap> for j in [1..Size(T)] do
+> 
+>    Append(C,[[]]);
+> 
+> od;
+gap> V:=[i, i+(Z(2^2))*i*b^-1+(Z(2^2))*i*b, i+(Z(2^2)^2)*i*b^-1+(Z(2^2)^2)*i*b,  b+(Z(2^2))*i*b^-1+(Z(2^2))*i,  b^2+(Z(2^2))*i*b+(Z(2^2))*i, b+(Z(2^2)^2)*i*b^2+(Z(2^2)^2)*i, b^2+(Z(2^2)^2)*i*b+(Z(2^2)^2)*i, b, b^2 ];
+[ (Z(2)^0)*<identity ...>, (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*b, (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b, 
+  (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2)^0)*b, (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b, (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b,
+  (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b, b, b^-1 ]
+gap> for t in T do
+> 	k:=Position(T,t);
+> 	empty:=0;
+> 		for a13 in S do
+> 		   for a23 in S do
+>  		      for w in V do
+>  		         v:=(i+a13*i*b^2*(i*b*a*b^2-i)+a23*i*b^2*(i*b^2*a*b-i))*(i*w);
+> 		         x:=v^-1*t*v;
+> 		         if x in C[k] then
+> 		         else
+> 		            Append(C[k],[x]);
+> 		         fi;
+> 		      od;
+> 		    od;
+> 		od;
+> 		for p in [1..k-1] do;
+> 			if Intersection(C[p],C[k])=[] then
+> 			else empty:=1;
+> 			fi;
+> 		od;
+> 		if empty=0 then
+> 			if Size(C[k])=1 then
+> 			   Append(position1,[k]);
+> 			else
+> 			   Append(position,[k]);
+> 			fi;
+> 		fi;
+> od;
+gap> Size(position);
+80
+gap> position;
+[ 2, 3, 4, 6, 7, 8, 10, 11, 12, 14, 15, 16, 18, 19, 20, 22, 23, 24, 26, 27, 28, 30, 31, 32, 34, 35, 36, 38, 39, 40, 42, 43, 44, 46, 
+  47, 48, 50, 51, 52, 54, 55, 56, 58, 59, 60, 62, 63, 64, 262, 264, 266, 268, 270, 272, 278, 280, 282, 284, 286, 288, 294, 296, 298, 300, 302, 304, 310, 
+  312, 314, 316, 318, 320, 523, 527, 539, 543, 555, 559, 571, 575 ]
+gap> Size(position1);
+64
+gap> position1;
+[ 1, 17, 33, 49, 66, 82, 98, 114, 131, 147, 163, 179, 196, 212, 228, 244, 261, 277, 293, 309, 326, 342, 358, 374, 391, 407, 423, 439, 456, 472, 488, 504, 
+  521, 537, 553, 569, 586, 602, 618, 634, 651, 667, 683, 699, 716, 732, 748, 764, 781, 797, 813, 829, 846, 862, 878, 894, 911, 927, 943, 959, 976, 992, 
+  1008, 1024 ]
+
+# This creates conjugacy classes
+gap> conjugacyclasses:=[];
+[  ]
+gap> for j in position do
+> 	Append(conjugacyclasses,[C[j]]);
+> od;
+gap> transversal:=[];
+[  ]
+gap>  for k in [1..Size(conjugacyclasses)] do
+> 	Append(transversal,[conjugacyclasses[k][1]]);
+> od;
+gap> for j in [25..Size(transversal)] do
+>  for t in [transversal[j]] do 
+>    centralizer:=[];
+>    done:=0;
+>      for a01 in S do
+>       for a02 in S do
+>         for a03 in S do
+>           for a11 in S do
+>             for a12 in S do
+>               for a13 in S do
+>                 for a21 in S do
+>                   for a22 in S do
+>                     for a23 in S do
+>                      for w in V do
+>                        v:=(i+a01*(a-i)+a02*i*b*(a-i)+a03*i*b^2*(a-i)+a11*(b*a*b^2-i)+a12*i*b*(b*a*b^2-i)+a13*i*b^2*(b*a*b^2-i)+a21*(b^2*a*b-i)+a22*i*b*(b^2*a*b-i)+a23*i*b^2*(b^2*a*b-i))*(i*w);
+>                        if v*(t)=(t)*v then
+>  	                    Append(centralizer,[v]);
+>                        fi;
+>                        if Size(centralizer)>16385 then
+>                           done:=1;
+>                           Print("Class Length of ",t," is less than 144.");
+>                           Print("\n"); 
+>                        fi;
+>                        if done=1 then break; fi; 
+>                      od;
+>                      if done=1 then break; fi;
+>                    od;
+>		     if done=1 then break; fi;
+>                  od;
+>		   if done=1 then break; fi;
+>                od;
+>		 if done=1 then break; fi;
+>              od;
+> 	       if done=1 then break; fi;
+>            od;         
+>	     if done=1 then break; fi;
+>          od;
+>          if done=1 then break; fi;
+>        od;
+>        if done=1 then break; fi;
+>      od;
+>   od;
+> od;
+Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
+2)*b^-1*a*b is less than 144.
+Class Length of (Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
+0)*b^-1*a*b is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(
+Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (
+Z(2^2))*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2))*b+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
+2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^
+0)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (
+Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(
+Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b is less than 144.
+Class Length of (Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
+0)*b^-1*a*b is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(
+Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b+(Z(2^2)^
+2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(
+Z(2^2))*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^
+0)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*<identity ...>+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(
+Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^
+0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*b^-1+(Z(2)^0)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^
+0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(
+Z(2^2))*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2)^
+0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*a+(Z(2^2))*b^-1+(
+Z(2)^0)*b+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^
+0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2)^
+0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2^2)^
+2)*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (
+Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(
+Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^
+0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
+Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(
