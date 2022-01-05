@@ -1,0 +1,45 @@
+# Start with the regular matrix representation:
+
+gap> g:=AlternatingGroup(4);;
+gap> g:=Image(RegularActionHomomorphism(g));
+Group([ (1,5,7)(2,4,8)(3,6,9)(10,11,12), (1,2,3)(4,7,10)(5,9,11)(6,8,12) ])
+gap> mats:=List(GeneratorsOfGroup(g),x->PermutationMat(x,Size(g),GF(4)));
+# For performance reasons it turns out to be useful to change the basis so that the algebra is a direct sum of smaller dimensional algebras:
+
+gap> bas:=List(MTX.Indecomposition(GModuleByMats(mats,GF(4))),x->x[1]);;
+gap> bas:=Concatenation(bas)^-1;
+< mutable compressed matrix 12x12 over GF(4) >
+gap> mats:=List(mats,x->x^bas);;
+(Verify block form with Display(mats[1]);). Now we form the algebra:
+
+gap> r:=Algebra(GF(4),mats);
+<algebra over GF(2^2), with 2 generators>
+gap> Size(r);
+16777216
+# Now we start searching for units:
+
+u:=Group(mats);
+for e in Enumerator(r) do
+  if not IsZero(DeterminantMat(e)) and not e in u then
+    Print("Found extra generator\n");
+    u:=ClosureGroup(u,e:cheap);
+    Print("Units now size ",Size(u),"\n");
+  fi;
+od;
+# This runs a bit and gives us a group of matrices:
+
+gap> u;
+<matrix group of size 7077888 with 11 generators>
+# For efficiency we cnonvert the unit group (which happens to be solvable) to a PcGroup:
+
+gap> iso:=IsomorphismPcGroup(u);;
+gap> v:=Image(iso,u);;
+and compute its conjugacy classes:
+
+gap> cl:=ConjugacyClasses(v);;
+gap> Collected(List(cl,Size));
+#G  FULL 1226870/ 109503kb live   906133/  99953kb dead    19000/ 371712kb free
+[ [ 1, 192 ], [ 12, 720 ], [ 144, 5400 ], [ 256, 1152 ], [ 3072, 1440 ],
+  [ 4096, 384 ] ]
+  
+  # From above, we can conclude that if class length is lesser than 144, then it must be 12.
