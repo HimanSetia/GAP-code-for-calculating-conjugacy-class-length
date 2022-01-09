@@ -156,78 +156,122 @@ gap> for j in [1..Size(transversal)] do
 # As we can see that output contains all the 80 elements, it implies that elements of transversal set have class length exactly equal to 12. So, our intuition was right.
 
 
-
-Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
-2)*b^-1*a*b is less than 144.
-Class Length of (Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
-0)*b^-1*a*b is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(
-Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(
-Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(
-Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (
+Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2)^
+0)*a*b+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(
+Z(2^2))*a*b+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^
+0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.Class Length of (
+Z(2^2)^2)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*b+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*a*b^-1*a+(Z(2)^
+0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2^2)^
+2)*b^-1+(Z(2^2))*b+(Z(2^2)^2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(Z(2^2))*a*b^-1+(
+Z(2)^0)*a*b+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2)^
+0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (
+Z(2^2))*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^
+0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2)^0)*b+(
+Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^
+2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(
+Z(2)^0)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*b^-1+(Z(2)^0)*b+(Z(2^2)^
+2)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2)^
+0)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b is less than 144.Class Length of (
+Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
+0)*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^
+0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(
+Z(2^2))*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(
+Z(2^2)^2)*b^-1+(Z(2^2))*b+(Z(2^2)^2)*a*b+(Z(2)^0)*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(
+Z(2^2))*b^-1+(Z(2^2))*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(
+Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
+2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (
+Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(Z(2)^
+0)*a*b+(Z(2)^0)*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(
+Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b*a+(
+Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^
+0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2)^
+0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(
+Z(2^2))*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*b+(Z(2^2))*a*b^-1+(
+Z(2^2))*a*b+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(
+Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
+2)*b^-1*a*b is less than 144.Class Length of (Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
+0)*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(
+Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (
 Z(2^2))*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2))*b+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^
-0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
-2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^
-2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(
-Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^
-0)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^
+2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^
+0)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (
 Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^
-2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(
-Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^
-2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b is less than 144.
-Class Length of (Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
-0)*b^-1*a*b is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
-Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(
-Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b+(Z(2^2)^
-2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(
-Z(2^2))*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(
+Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b is less than 144.Class Length of (Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^
+0)*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(
+Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b+(Z(2^2)^
+2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(
+Z(2^2))*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^
 0)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
-Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*<identity ...>+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(
-Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(
-Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(
+Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^
 0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^
-2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(
-Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*b^-1+(Z(2)^0)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^
-0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(
-Z(2^2))*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2)^
-0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*a+(Z(2^2))*b^-1+(
-Z(2)^0)*b+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2)^0)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*b^-1+(Z(2)^0)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^
+0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(
+Z(2^2))*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2)^
+0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2^2))*b^-1+(
+Z(2)^0)*b+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^
 0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
-Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2)^
-0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1*a+(
-Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
-Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2^2)^
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2)^
+0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1*a+(
+Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2^2)^
 2)*a*b^-1+(Z(2)^0)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (
 Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^
-0)*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(
-Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^
-0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.
-Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(
+Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^0)*b+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^
+0)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(
+Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(Z(2)^0)*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2)^0)*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2)^0)*a+(Z(2)^0)*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(
+Z(2^2))*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*a*b+(
+Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2)^0)*b+(
+Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(
+Z(2^2)^2)*b^-1+(Z(2)^0)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2^2)^2)*b+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b^-1+(
+Z(2^2))*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(
+Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2)^0)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2)^
+0)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2)^0)*a+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2)^2)*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^
+2)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2)^0)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2)^0)*b+(Z(2^2)^2)*a*b^-1+(
+Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(
+Z(2^2))*b^-1+(Z(2)^0)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*<identity ...>+(Z(2)^0)*a+(Z(2)^0)*b^-1+(Z(2^2)^2)*b+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(
+Z(2^2))*a*b^-1*a+(Z(2)^0)*a*b*a+(Z(2^2))*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2)^0)*a+(Z(2^2))*b^-1+(Z(2^2)^2)*b+(Z(2^2)^
+2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2)^2)*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (
+Z(2^2))*<identity ...>+(Z(2^2))*a+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(
+Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*a+(Z(2^2)^2)*b^-1+(Z(2^2))*b+(Z(2^2)^2)*a*b^-1*a+(Z(2^2))*a*b*a+(
+Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*a+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2^2))*a*b+(
+Z(2)^0)*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*a+(Z(2^2))*b^-1+(Z(2^2))*b+(Z(2)^0)*a*b^-1+(
+Z(2)^0)*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.Class Length of (
+Z(2^2))*<identity ...>+(Z(2^2))*a+(Z(2)^0)*b^-1+(Z(2)^0)*a*b^-1+(Z(2^2))*a*b+(Z(2^2))*b^-1*a+(Z(2^2))*a*b^-1*a+(Z(2^2))*a*b*a+(
+Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*a+(Z(2)^0)*b^-1+(
+Z(2^2))*b+(Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^
+2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*a+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
+Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*a+(
+Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+
