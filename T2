@@ -153,7 +153,8 @@ gap> for j in [1..Size(transversal)] do
 >   od;
 > od;
 
-# As we can see that output contains all the 80 elements, it implies that elements of transversal set have class length exactly equal to 12. So, our intuition was right.
+# The code will take around 2 weeks to complete. We can also proceed in the same way in the other two cases, i.e. v1 & v2. Running all three codes in parallel, we have found the same conslusion in each case.
+
 
 
 Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*a*b^-1+(Z(2)^
@@ -274,4 +275,9 @@ Z(2^2))*b+(Z(2^2))*a*b^-1+(Z(2^2))*b^-1*a+(Z(2)^0)*a*b^-1*a+(Z(2^2))*a*b*a+(Z(2^
 2)*b*a*b^-1 is less than 144.Class Length of (Z(2^2))*<identity ...>+(Z(2^2))*a+(Z(2^2))*a*b+(Z(2^2)^2)*b^-1*a+(Z(2^2)^2)*a*b^-1*a+(
 Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2))*b*a*b^-1 is less than 144.Class Length of (Z(2^2)^2)*<identity ...>+(Z(2^2))*a+(
 Z(2^2))*b+(Z(2^2)^2)*a*b^-1+(Z(2^2)^2)*b^-1*a+(Z(2^2))*a*b*a+(Z(2^2)^2)*b^-1*a*b+(Z(2^2)^2)*b*a*b^-1 is less than 144.
+
+
+
+# As we can see that output contains all the 80 elements, it implies that elements of transversal set have class length exactly equal to 12. So, our intuition was right.
+
 
