@@ -1,3 +1,22 @@
+# Load the group ring FA4. 
+
+F:=FreeGroup("a","b");;
+G:=F/[F.1^2, F.2^3, (F.1*F.2)^3];;
+a:=G.1;;
+b:=G.2;;
+F:=GF(4);;
+FG:=GroupRing(F,G);;
+SetReducedMultiplication(G);;
+i:=One(FG);;
+S:=List(F);;
+
+# V denotes V(FC3). 
+
+gap> V:=[i, i+(Z(2^2))*i*b^-1+(Z(2^2))*i*b, i+(Z(2^2)^2)*i*b^-1+(Z(2^2)^2)*i*b,  b+(Z(2^2))*i*b^-1+(Z(2^2))*i,  b^2+(Z(2^2))*i*b+(Z(2^2))*i, b+(Z(2^2)^2)*i*b^2+(Z(2^2)^2)*i, b^2+(Z(2^2)^2)*i*b+(Z(2^2)^2)*i, b, b^2 ];
+[ (Z(2)^0)*<identity ...>, (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*b, (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b, 
+  (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2)^0)*b, (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b, (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b,
+  (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b, b, b^-1 ]
+
 # T is the centralizer of v2 in 1+Gamma(K4).
 
 gap> T:=[];
@@ -24,6 +43,9 @@ gap> for a01 in S do
 >        od;
 >      od;
 >    od;
+
+# Size of centralizer T
+
 gap>Size(T);
 1024
 
@@ -40,14 +62,7 @@ gap> for j in [1..Size(T)] do
 > 
 >    Append(C,[[]]);
 > 
-> od;
-
-# V denotes V(FC3). 
-
-gap> V:=[i, i+(Z(2^2))*i*b^-1+(Z(2^2))*i*b, i+(Z(2^2)^2)*i*b^-1+(Z(2^2)^2)*i*b,  b+(Z(2^2))*i*b^-1+(Z(2^2))*i,  b^2+(Z(2^2))*i*b+(Z(2^2))*i, b+(Z(2^2)^2)*i*b^2+(Z(2^2)^2)*i, b^2+(Z(2^2)^2)*i*b+(Z(2^2)^2)*i, b, b^2 ];
-[ (Z(2)^0)*<identity ...>, (Z(2)^0)*<identity ...>+(Z(2^2))*b^-1+(Z(2^2))*b, (Z(2)^0)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2^2)^2)*b, 
-  (Z(2^2))*<identity ...>+(Z(2^2))*b^-1+(Z(2)^0)*b, (Z(2^2))*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2))*b, (Z(2^2)^2)*<identity ...>+(Z(2^2)^2)*b^-1+(Z(2)^0)*b,
-  (Z(2^2)^2)*<identity ...>+(Z(2)^0)*b^-1+(Z(2^2)^2)*b, b, b^-1 ]
+> od;  
 gap> for t in T do
 > 	k:=Position(T,t);
 > 	empty:=0;
@@ -153,7 +168,7 @@ gap> for j in [1..Size(transversal)] do
 >   od;
 > od;
 
-# The code will take around 2 weeks to complete. We can also proceed in the same way in the other two cases, i.e. v1 & v2. Running all three codes in parallel, we have found the same conslusion in each case.
+# The code will take around 2 weeks to complete. We can also proceed in the same way in the other two cases, i.e. v1 & v2. After running all three codes in parallel, we have found the same conslusion in each case.
 
 
 
