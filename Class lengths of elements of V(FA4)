@@ -12,7 +12,7 @@ gap> bas:=Concatenation(bas)^-1;
 < mutable compressed matrix 12x12 over GF(4) >
 gap> mats:=List(mats,x->x^bas);;
 
-Now we form the algebra FA4, denoted by r:
+# Now we form the algebra FA4, denoted by r:
 
 gap> r:=Algebra(GF(4),mats);
 <algebra over GF(2^2), with 2 generators>
@@ -30,7 +30,7 @@ for e in Enumerator(r) do
   fi;
 od;
 
-# This runs a bit and gives us unit group of FA4:
+# This runs a bit and gives us the unit group of FA4, denoted by u:
 
 gap> u;
 <matrix group of size 7077888 with 11 generators>
@@ -40,7 +40,7 @@ gap> u;
 gap> iso:=IsomorphismPcGroup(u);;
 gap> v:=Image(iso,u);;
 
-# Possible lengths of conjugacy classes of elements of r (the unit group of FA4):
+# Possible lengths of conjugacy classes of elements of u in r :
 
 gap> cl:=ConjugacyClasses(v);;
 gap> Collected(List(cl,Size));
