@@ -12,14 +12,14 @@ gap> bas:=Concatenation(bas)^-1;
 < mutable compressed matrix 12x12 over GF(4) >
 gap> mats:=List(mats,x->x^bas);;
 
-Now we form the algebra:
+Now we form the algebra FA4, denoted by r:
 
-gap> FA4:=Algebra(GF(4),mats);
+gap> r:=Algebra(GF(4),mats);
 <algebra over GF(2^2), with 2 generators>
-gap> Size(FA4);
+gap> Size(r);
 16777216
 
-# Now we start searching for unit group :
+# Now we start searching for unit group of r :
 
 u:=Group(mats);
 for e in Enumerator(r) do
@@ -40,7 +40,7 @@ gap> u;
 gap> iso:=IsomorphismPcGroup(u);;
 gap> v:=Image(iso,u);;
 
-# Possible lengths of conjugacy classes of elements of the unit group of FA4:
+# Possible lengths of conjugacy classes of elements of r (the unit group of FA4):
 
 gap> cl:=ConjugacyClasses(v);;
 gap> Collected(List(cl,Size));
@@ -48,4 +48,4 @@ gap> Collected(List(cl,Size));
 [ [ 1, 192 ], [ 12, 720 ], [ 144, 5400 ], [ 256, 1152 ], [ 3072, 1440 ],
   [ 4096, 384 ] ]
   
-# We can observe that there is no class length possible between 12 and 144.
+# We can observe that if the class length of an element is less than 144, then it must be 12.
